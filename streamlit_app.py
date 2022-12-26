@@ -12,7 +12,7 @@ log = subprocess.Popen([f'{sys.executable} -m pip install -e .'], stdout = subpr
 st.write(os.getcwd())
 
 
-st.write(subprocess.Popen(["dl+direct", "--subject", "001", "--lowmem", "--bet", "/content/drive/MyDrive/Hipposeg/patient_data/80100000_t1w_3d_tfe_nyul.nii.gz"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
+st.write(subprocess.run(["dl+direct", "--subject", "001", "--lowmem", "--bet", "/content/drive/MyDrive/Hipposeg/patient_data/80100000_t1w_3d_tfe_nyul.nii.gz"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
 
 st.write(print(log) )
 uploaded_file = st.file_uploader("Choose a file")
