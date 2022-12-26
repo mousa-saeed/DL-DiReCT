@@ -14,6 +14,12 @@ st.write(os.getcwd())
 st.write(print(log) )
 uploaded_file = st.file_uploader("Choose a file")
 print(uploaded_file)
+
+
+with open(os.path.join(os.getcwd(),uploaded+file.name),"wb") as f:
+         f.write(uploaded_file.getbuffer())
+
+
 # st.write('## Run Streamlit on Colab with `pyngrok` ')
 # st.write("This is an amazing tutorial, I love this channel!!!")
 st.markdown("# maybe it worked")
