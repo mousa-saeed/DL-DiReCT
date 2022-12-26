@@ -11,6 +11,9 @@ log = subprocess.Popen([f'{sys.executable} -m pip install -e .'], stdout = subpr
 
 st.write(os.getcwd())
 
+
+st.wrtite(subprocess.Popen(["dl_direct"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
+
 st.write(print(log) )
 uploaded_file = st.file_uploader("Choose a file")
 print(uploaded_file)
@@ -19,8 +22,9 @@ print(uploaded_file)
 with open(os.path.join(os.getcwd(),uploaded_file.name),"wb") as f:
          f.write(uploaded_file.getbuffer())
 
-
 # st.write('## Run Streamlit on Colab with `pyngrok` ')
 # st.write("This is an amazing tutorial, I love this channel!!!")
 st.markdown("# maybe it worked")
 st.write(os.listdir())
+
+st.wrtite(subprocess.Popen(["dl_direct"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
