@@ -6,8 +6,8 @@ import os
 
 
 
-
-st.write(subprocess.run([ "pip", "install", "-e", "."], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
+st.write(!pip install e .) 
+# st.write(subprocess.run([ "pip", "install", "-e", "."], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
   # wait for subprocess to install package before running your actual code below
 # time.sleep(90)
 
@@ -18,7 +18,6 @@ st.write(os.getcwd())
 
 st.write(subprocess.run(["dl+direct", "--subject", "001", "--lowmem", "--bet", "/content/drive/MyDrive/Hipposeg/patient_data/80100000_t1w_3d_tfe_nyul.nii.gz"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
 
-st.write(print(log) )
 uploaded_file = st.file_uploader("Choose a file")
 print(uploaded_file)
 
