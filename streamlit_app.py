@@ -12,7 +12,7 @@ log = subprocess.Popen([f'{sys.executable} -m pip install -e .'], stdout = subpr
 st.write(os.getcwd())
 
 
-st.wrtite(subprocess.Popen(["dl_direct"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
+st.write(subprocess.Popen(["dl_direct"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
 
 st.write(print(log) )
 uploaded_file = st.file_uploader("Choose a file")
