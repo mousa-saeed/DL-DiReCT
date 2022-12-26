@@ -16,7 +16,7 @@ uploaded_file = st.file_uploader("Choose a file")
 print(uploaded_file)
 
 
-with open(os.path.join(os.getcwd(),uploaded+file.name),"wb") as f:
+with open(os.path.join(os.getcwd(),uploaded_file.name),"wb") as f:
          f.write(uploaded_file.getbuffer())
 
 
