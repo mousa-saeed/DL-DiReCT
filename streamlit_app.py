@@ -1,5 +1,6 @@
 import streamlit as st
 import subprocess
+import time
 import sys
 
 log = subprocess.Popen([f'{sys.executable} -m pip install -e .'], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True)
