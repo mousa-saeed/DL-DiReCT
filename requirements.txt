@@ -1,5 +1,5 @@
 antspyx==0.3.3
-HD-BET @ https://github.com/MIC-DKFZ/HD-BET/archive/refs/heads/master.zip
+git+https://github.com/MIC-DKFZ/HD-BET@master
 nibabel==4.0.2
 nltk==3.7
 numpy==1.21.6
