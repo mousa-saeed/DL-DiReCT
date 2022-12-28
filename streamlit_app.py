@@ -1,4 +1,5 @@
 import streamlit as st
+import nibabel as nib
 import subprocess
 import time
 import sys
