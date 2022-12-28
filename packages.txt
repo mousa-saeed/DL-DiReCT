@@ -1,1 +1,1 @@
-pip install nibabel
+pip3 install nibabel
