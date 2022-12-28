@@ -31,4 +31,4 @@ st.write(subprocess.run(["dl+direct", "--subject", "001", "--lowmem", "--bet", "
 st.markdown("# maybe it worked")
 st.write(os.listdir())
 
-st.wrtite(subprocess.Popen(["dl_direct"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
+st.write(subprocess.Popen(["dl_direct"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
