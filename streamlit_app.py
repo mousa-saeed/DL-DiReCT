@@ -26,6 +26,7 @@ with open(os.path.join(os.getcwd(),uploaded_file.name),"wb") as f:
 
 # st.write('## Run Streamlit on Colab with `pyngrok` ')
 # st.write("This is an amazing tutorial, I love this channel!!!")
+st.write(os.system("dl+direct"))
 st.write(os.system("python src/conform.py 80100000_t1w_3d_tfe_nyul.nii.gz T1w_norm.nii.gz ") )
 # st.write(subprocess.run(["python src/conform.py 80100000_t1w_3d_tfe_nyul.nii.gz T1w_norm.nii.gz "],  stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=False) )
 # st.write(subprocess.run(["dl+direct", "--subject", "001", "--lowmem", "--bet", "/content/drive/MyDrive/Hipposeg/patient_data/80100000_t1w_3d_tfe_nyul.nii.gz"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
