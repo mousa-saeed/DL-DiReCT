@@ -7,7 +7,7 @@ import os
 
 
 
-st.write(subprocess.run(["pip install nibabel") ) 
+st.write(subprocess.run(["pip install nibabel"]) ) 
 # st.write(subprocess.run([ "pip install -e ."], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
   # wait for subprocess to install package before running your actual code below
 # time.sleep(90)
