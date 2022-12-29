@@ -54,9 +54,7 @@ if __name__ == '__main__':
     
     input_file = args.input
     output_file = args.output
-    print(output_file)
-#     output_file = "."
-#     os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
     if args.mp2rage_inv2:
         # use INV2 to generate brain mask
@@ -78,7 +76,6 @@ if __name__ == '__main__':
     
     # run HD-BET
     run_hd_bet(input_file, output_file, mode=hdbet_mode, device=hdbet_device, postprocess=True, do_tta=hdbet_tta)
-    print("finished HD bet")
     if args.mp2rage_inv2 or args.mp2rage_inv2x:
         # rename mask from intermediate image
         mask_file = args.output[:-7] + '_mask.nii.gz'
