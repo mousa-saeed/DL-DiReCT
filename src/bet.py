@@ -55,8 +55,8 @@ if __name__ == '__main__':
     input_file = args.input
     output_file = args.output
     print(output_file)
-    output_file = "."
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+#     output_file = "."
+#     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
     if args.mp2rage_inv2:
         # use INV2 to generate brain mask
