@@ -43,5 +43,6 @@ st.write("Done Skull stripping")
 
 st.markdown("# maybe it worked")
 st.write(os.listdir())
+st.write(os.listdir("dest"))
 
 # st.write(subprocess.run(["dl_direct"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
