@@ -29,6 +29,15 @@ with open(os.path.join(os.getcwd(),uploaded_file.name),"wb") as f:
 # st.write(subprocess.run(["dl+direct"] ))
 st.write(subprocess.run([f"{sys.executable}", "src/conform.py", "80100000_t1w_3d_tfe_nyul.nii.gz", "./T1w_norm.nii.gz" ],
                         stdout = subprocess.PIPE, stderr= subprocess.PIPE) )
+
+IN_VOLUME="./T1w_norm_noskull.nii.gz"
+BET_INPUT_VOLUME="./T1w_norm.nii.gz"
+MASK_VOLUME="./T1w_norm_noskull_mask.nii.gz"
+
+
+st.write(subprocess.run([f"{sys.executable}", "src/bet.py", BET_INPUT_VOLUME, IN_VOLUME ],
+                        stdout = subprocess.PIPE, stderr= subprocess.PIPE) )
+st.write("Done Skull stripping")
 # st.write(subprocess.run(["python src/conform.py 80100000_t1w_3d_tfe_nyul.nii.gz T1w_norm.nii.gz "],  stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=False) )
 # st.write(subprocess.run(["dl+direct", "--subject", "001", "--lowmem", "--bet", "/content/drive/MyDrive/Hipposeg/patient_data/80100000_t1w_3d_tfe_nyul.nii.gz"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
 
