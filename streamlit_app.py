@@ -30,7 +30,7 @@ with open(os.path.join(os.getcwd(),uploaded_file.name),"wb") as f:
 st.write(subprocess.run([f"{sys.executable}", "src/conform.py", "80100000_t1w_3d_tfe_nyul.nii.gz", "./T1w_norm.nii.gz" ],
                         stdout = subprocess.PIPE, stderr= subprocess.PIPE) )
 
-IN_VOLUME="./T1w_norm_noskull.nii.gz"
+IN_VOLUME="./in_volume.nii.gz"
 BET_INPUT_VOLUME="./T1w_norm.nii.gz"
 MASK_VOLUME="./T1w_norm_noskull_mask.nii.gz"
 
