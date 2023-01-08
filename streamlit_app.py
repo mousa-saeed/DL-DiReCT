@@ -49,7 +49,7 @@ if uploaded_file != None:
 
   if st.button("Skull Strip", key = 'abc'):
     st.write(subprocess.run([f"{sys.executable} src/bet.py {BET_INPUT_VOLUME} {IN_VOLUME} "],
-                            stdout = sys.stdout, stderr= subprocess.PIPE, shell = True) )
+                            stdout = sys.stdout, stderr= sys.stderr, shell = True) )
     st.write("Done Skull stripping")
   # # st.write(subprocess.run(["python src/conform.py 80100000_t1w_3d_tfe_nyul.nii.gz T1w_norm.nii.gz "],  stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=False) )
   # # st.write(subprocess.run(["dl+direct", "--subject", "001", "--lowmem", "--bet", "/content/drive/MyDrive/Hipposeg/patient_data/80100000_t1w_3d_tfe_nyul.nii.gz"], stdout = subprocess.PIPE, stderr= subprocess.PIPE, shell=True))
@@ -57,7 +57,7 @@ if uploaded_file != None:
   IN_VOLUME_CROP="dest/T1w_norm_noskull_cropped.nii.gz"
   MASK_VOLUME ="dest/in_volume_mask.nii.gz"
   
-  if st.button("Skull Strip", key = 'cab'):
+  if st.button("Crop", key = 'cab'):
     st.write(subprocess.run([f"{sys.executable} src/crop.py {MASK_VOLUME} {IN_VOLUME} {IN_VOLUME_CROP}"],
                           stdout= sys.stdout, stderr = subprocess.PIPE, shell = True) ) 
 
